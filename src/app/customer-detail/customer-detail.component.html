@@ -1,0 +1,36 @@
+<div class="card my-3" >
+    <div class="card-header">
+      {{customer.name}}
+    </div>
+    <div class="card-body row ">
+      <div class="col-2 border-end">
+       <h5> Customer Details</h5>
+       <div><i class="fa-solid fa-phone" style="color: #27ac5d;"></i> {{customer.phone}}</div>
+       <div><i class="fa-regular fa-envelope" style="color: #27ac5d;"></i> {{customer.email}}</div>
+      </div>
+      <div class="col-2 border-end">
+        <h5>Odometer</h5>
+        <div><i class="fa-solid fa-gauge" style="color: #27ac5d;"></i> {{customer.running_km}}</div>
+      </div>
+      <div class="col-2 border-end">
+        <h5>date</h5>
+        <div><i class="fa-solid fa-calendar-days" style="color: #27ac5d;"></i> {{customer.created_date|date}}</div>  
+      </div>
+      <div class="col-2 border-end">
+        <h5>Vehicle no</h5> 
+        <div><i class="fa-solid fa-car" style="color: #27ac5d;"></i>  {{customer.vehicle_no}}</div>
+      </div>
+      <div class="col-2 border-end">
+        <h5 class="text-center "> Total</h5>
+
+        <div class="my-3"><span class="me-2"><i class="fa-solid fa-rupee-sign"></i></span> 12345678</div>
+    </div>
+    <div class="col-2 ">
+        <h5 class="text-center"> Status</h5>
+
+
+        <div class="my-3"> 
+            pending
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,54 @@
+
+<div class="card mb-3 mx-auto mt-3" style="max-width: 70%">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../../assets/images/service.jpg" class="w-100 h-100 rounded-start" alt="">
+      </div>                 
+      <div class="col-md-8">
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{isEdit?"Update customer details":"Add customer"}}</h5> -->
+
+          <h5 class="text-center fw-bold" *ngIf="isEdit;else addMode"> Edit customer details </h5>
+
+          <ng-template #addMode>
+            <h5 class="text-center  fw-bold">Add customer</h5>
+          </ng-template>
+
+          <form action="" [formGroup]="customerForm" (ngSubmit)="handlesSubmit()">
+            <div class="mb-3">
+                <label for="">Customer Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="">Customer Phone Number</label>
+                <input type="text" class="form-control" formControlName="phone">
+
+            </div>
+            <div class="mb-3">
+                <label for="">Customer Email</label>
+                <input type="email" class="form-control" formControlName="email">
+
+            </div>
+
+            <div class="mb-3">
+                <label for="">Running Kilometers</label>
+                <input type="text" class="form-control" formControlName="running_km">
+
+            </div>
+
+            <div class="mb-3">
+                <label for="">VehicleNumber</label>
+                <input type="text" class="form-control" formControlName="vehicle_no">
+
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-outline-success">{{isEdit? "change": "Add"}}</button>
+            </div>
+            
+          </form>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
