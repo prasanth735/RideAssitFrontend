@@ -1,0 +1,72 @@
+Schema:costomer
+
+
+attributes:
+==============
+id,
+name,
+phonenumber
+email
+vehiclenumber
+running kilometers
+
+
+1. API for listing all customers
+
+api:http://127.0.0.1:8000/api/customers
+method:get
+body:nill
+authorisation:nill
+
+
+2.API for add new customer
+
+api:http://127.0.0.1:8000/api/customers
+method:post
+body:["customer_name":"customer name",
+"phone":"customer phone number",
+"email":customer_email",
+"vehiclenumber":"customer_vehicle_number",
+runninng_kilometers":"runnin_km"]
+authorisation:nill
+
+
+3.API for fetching cutomer detail
+
+api:http://127.0.0.1:8000/api/customers/{id}
+method:get
+body:nill
+authorisation:nill
+
+
+
+4.API for update customer detail
+
+api:http://127.0.0.1:8000/api/customers/{id}
+method:put
+body:["customer_name":"customer name",
+"phone":"customer phone number",
+"email":customer_email",
+"vehiclenumber":"customer_vehicle_number",
+runninng_kilometers":"runnin_km"]
+authorisation:nill
+
+
+5.API for delete customer 
+
+url:http://127.0.0.1:8000/api/customers/{id}
+
+
+6.API for retching token
+
+url:http://127.0.0.1:8000/api/token
+method:post
+body:["username","password"]
+
+
+7.API for fetching accestoken by passing refresh token
+
+url:http://127.0.0.1:8000/api/token/refresh
+method:post
+body:["refresh_token]
+
